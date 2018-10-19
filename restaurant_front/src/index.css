@@ -12,3 +12,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header {
+  display: flex;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+.logo {
+  height: 105pt;
+  margin-left: 20pt;
+  margin-top: 10pt;
+}
+
+.navLink {
+  display: inline;
+  margin-left: 30pt;
+}
+
+.navBar {
+  background-color: darkslateblue;
+  height: 140pt;
+}
+
+.title {
+  display: flex;
+}

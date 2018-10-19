@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Button from 'react-bootstrap/lib/Button';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

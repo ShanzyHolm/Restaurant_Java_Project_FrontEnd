@@ -6,7 +6,6 @@ class BookingContainer extends Component {
   constructor(props){
     super(props);
     this.state = {bookings: []}
-
   }
 
   componentDidMount(){
@@ -19,10 +18,8 @@ class BookingContainer extends Component {
 
 
   render() {
-    console.log(this.state.bookings);
+    // console.log(this.state.bookings);
     return (
-
-      // <p>hello booking</p>
       <BookingList bookings={this.state.bookings}/>
     )
   }

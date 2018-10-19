@@ -8,7 +8,7 @@ const Customer = (props) => {
         Name: {props.customer.name}
       </p>
       <p>
-        Phone Number: {props.customers.phone}
+        Phone Number: {props.customer.number}
       </p>
     </div>
   )

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Customer from '../../component/customers/Customer.js';
+import Customer from '../../components/customers/Customer.js';
 
 const CustomerList = (props) => {
 
-  const allCustomers = props.customers.map((customers) => {
-    return (<li key={customers.id} className="customer-component-item">
+  const allCustomers = props.customers.map((customer) => {
+    return (<li key={customer.id} className="customer-component-item">
       <Customer customer={customer} />
     </li>
   )

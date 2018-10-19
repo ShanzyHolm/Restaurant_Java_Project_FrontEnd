@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CustomerList from './CustomerList';
 
 class CustomerContainer extends Component {
 
@@ -7,10 +8,18 @@ class CustomerContainer extends Component {
     this.state = {customers: []}
   }
 
+  componentDidMount(){
+      fetch('/customers')
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({customers: data._embedded.customers})
+      })
+    }
+
   render() {
+    console.log(this.state.customers);
     return (
-      <p>Hello Customer</p>
-      // <CustomerList customers={this.state.customers}/>
+      <CustomerList customers={this.state.customers}/>
     )
   }
 

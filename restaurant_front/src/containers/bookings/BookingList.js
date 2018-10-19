@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Booking from '../../component/bookings/Booking.js';
+import Booking from '../../components/bookings/Booking.js';
 
 const BookingList = (props) => {
 
-  const allBookings = props.bookings.map((bookings) => {
-    return (<li key={bookings.id} className="booking-component-item">
+  const allBookings = props.bookings.map((booking) => {
+    return (<li key={booking.id} className="booking-component-item">
       <Booking booking={booking} />
     </li>
   )

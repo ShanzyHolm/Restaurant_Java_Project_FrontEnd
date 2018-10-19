@@ -1,32 +1,32 @@
 import React, {Component} from 'react';
+import BookingList from './BookingList';
 
 class BookingContainer extends Component {
 
-  constructors(props){
+  constructor(props){
     super(props);
     this.state = {bookings: []}
-    this.url = props.url;
+
   }
 
   componentDidMount(){
-      fetch(this.url)
+      fetch('/bookings')
       .then((res) => res.json())
       .then((data) => {
-        if(data._embedded){
         this.setState({bookings: data._embedded.bookings})
-      } else {
-        this.setState({bookings: [data]})
-      }
       })
-
     }
 
+
   render() {
+    console.log(this.state.bookings);
     return (
+
+      // <p>hello booking</p>
       <BookingList bookings={this.state.bookings}/>
     )
   }
 
 }
 
-export default BookingsContainer;
+export default BookingContainer;

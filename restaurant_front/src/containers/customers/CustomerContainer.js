@@ -26,7 +26,7 @@ class CustomerContainer extends Component {
         this.setState({customers: orderedCustomers});
       }
 
-      sortCustomersByBookingCountDesc(){
+      sortCustomersByBookingCountAsc(){
       const orderedCustomers =  this.state.customers.sort(function(a, b){
           return a.bookings.length - b.bookings.length});
           this.setState({customers: orderedCustomers});
@@ -34,7 +34,6 @@ class CustomerContainer extends Component {
 
 
   render() {
-    console.log("state is: ",this.state.customers);
     return (
       <div>
       <button onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>

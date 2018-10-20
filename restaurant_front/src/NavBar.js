@@ -8,8 +8,7 @@ const NavBar = () => {
       <header className="navBar">
 
         <div>
-          {/* <h1 className="title">Cafe 503</h1> */}
-          <Image src="/images/Cafe503Logo.jpg" alt="CafeLogo" className="logo" rounded/>
+          <Image src="/images/Cafe503Logo.jpg" alt="CafeLogo" className="logo" rounded />
         </div>
 
         <Grid className="header-grid">
@@ -21,12 +20,12 @@ const NavBar = () => {
                 <Button href="/" bsStyle="warning">Home</Button>
               </ButtonGroup>
 
-              <DropdownButton className="customer-buttons" bsStyle="warning" title="Customers" id="dropdown-customers-menu">
+              <DropdownButton className="customer-buttons" pullRight bsStyle="warning" title="Customers" id="dropdown-customers-menu">
                 <MenuItem href="/customers" bsStyle="warning">View All Customers</MenuItem>
                 <MenuItem href="." bsStyle="warning">Edit Customer</MenuItem>
               </DropdownButton>
 
-              <DropdownButton className="booking-buttons" bsStyle="warning" title="Bookings" id="dropdown-bookings-menu">
+              <DropdownButton className="booking-buttons" pullRight bsStyle="warning" title="Bookings" id="dropdown-bookings-menu">
                 <MenuItem href="/bookings" bsStyle="warning">View All Bookings</MenuItem>
                 <MenuItem href="." bsStyle="warning">Edit Booking</MenuItem>
               </DropdownButton>
@@ -34,7 +33,8 @@ const NavBar = () => {
             </ButtonToolbar>
           </Row>
           <Row className="row1">
-            <h1>Welcome to Cafe 503!</h1>
+            <h1>Welcome to Cafe</h1>
+            <h1 className="error">503</h1>
           </Row>
           </Grid>
 

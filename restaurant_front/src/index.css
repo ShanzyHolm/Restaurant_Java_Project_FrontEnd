@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: palegoldenrod;
 }
 
 code {
@@ -18,10 +19,44 @@ header {
 }
 
 h1 {
-  font-size: 40pt;
+  font-size: 25pt;
   display: flex;
-  color: white;
-  justify-content: center;
+  color: goldenrod;
+  position: fixed;
+  left: 30%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1.error {
+  font-size: 42pt;
+  display: flex;
+  color: goldenrod;
+  position: fixed;
+  top: 12%;
+  left: 42%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+img.home {
+  height: 250pt;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  border-radius: 20%;
+  border-style: double;
+  border-color: darkslateblue;
+  border-width: 10pt;
+}
+
+h5.message {
+  font-size: 10pt;
+  display: flex;
+  color: darkslateblue;
+  position: fixed;
+  top: 80%;
+  left: 25%;
 }
 
 .logo {
@@ -34,16 +69,10 @@ h1 {
   display: flex;
   justify-content: flex-end;
   color: black;
+  margin-right: 30pt;
 }
 
 .navBar {
   background-color: darkslateblue;
   height: 140pt;
-}
-
-.title {
-  display: flex;
-  color: white;
-  justify-content: center;
-
 }

@@ -6,20 +6,28 @@ class BookingContainer extends Component {
   constructor(props){
     super(props);
     this.state = {bookings: []}
-    this.url = props.url;
+    // this.url = props.url;
   }
 
   componentDidMount(){
-      fetch(this.url)
+      fetch('/bookings')
       .then((res) => res.json())
       .then((data) => {
-        if(data._embedded){
         this.setState({bookings: data._embedded.bookings})
-      } else {
-        this.setState({bookings: [data]})
-      }
       })
     }
+
+  // componentDidMount(){
+  //     fetch(this.url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if(data._embedded){
+  //       this.setState({bookings: data._embedded.bookings})
+  //     } else {
+  //       this.setState({bookings: [data]})
+  //     }
+  //     })
+  //   }
 
 
   render() {
@@ -32,12 +40,3 @@ class BookingContainer extends Component {
 }
 
 export default BookingContainer;
-
-
-// componentDidMount(){
-//     fetch('/bookings')
-//     .then((res) => res.json())
-//     .then((data) => {
-//       this.setState({bookings: data._embedded.bookings})
-//     })
-//   }

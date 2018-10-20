@@ -36,8 +36,8 @@ class CustomerContainer extends Component {
   render() {
     return (
       <div>
-      <button onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>
-      <button onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</button>
+      <button  className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>
+      <button className="customer-button" onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</button>
       <CustomerList customers={this.state.customers}/>
     </div>
     )

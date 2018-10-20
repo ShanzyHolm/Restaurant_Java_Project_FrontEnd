@@ -3,7 +3,7 @@ import React from 'react';
 const Customer = (props) => {
 
   return (
-    <div>
+    <div className="customer-component">
       <p>
         Name: {props.customer.name}
       </p>

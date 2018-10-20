@@ -2,13 +2,17 @@ import React from 'react';
 
 const Customer = (props) => {
 
+  const url = "/customers/" + props.customer.id
+
   return (
     <div className="customer-component">
-      <p>
-        Name: {props.customer.name}
-      </p>
-      <p>
-        Phone Number: {props.customer.number}
+      <a href={url}>
+        <p className="customer-name">
+          <strong>Name: </strong> {props.customer.name}
+        </p>
+      </a>
+      <p className="customer-number">
+        <strong>Phone Number: </strong> {props.customer.number}
       </p>
     </div>
   )

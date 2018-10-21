@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import { Form, FormGroup, Col, ControlLabel, FormControl } from 'react-bootstrap';
 
 class CustomerFormContainer extends Component {
   constructor() {
     super();
   }
+
   handleSubmit(event){
     event.preventDefault();
     fetch("/customers", {
@@ -22,14 +24,27 @@ class CustomerFormContainer extends Component {
   render(){
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text"placeholder="Name" name="name"/>
-          <input type="text"placeholder="Contact Number" name="number"/>
-          <button type="submit">Save Customer</button>
-        </form>
-      </div>
-    )
-  }
+        <Form horizontal onSubmit={this.handleSubmit}>
 
-};
-export default CustomerFormContainer;
+          <FormGroup controlId="customerForm">
+            <Col componentClass={ControlLabel} sm={2}>
+              Name:
+            </Col>
+            <Col sm={5}>
+              <FormControl type="text"placeholder="Name" name="name"/>
+            </Col>
+          </FormGroup>
+
+          <FormGroup>
+            <input type="text"placeholder="Contact Number" name="number"/>
+          </FormGroup>
+          <FormGroup>
+            <button type="submit">Save Customer</button>
+          </FormGroup>
+        </Form>
+      </div>
+        )
+        }
+
+        };
+        export default CustomerFormContainer;

@@ -6,6 +6,7 @@ class BookingContainer extends Component {
   constructor(props){
     super(props);
     this.state = {bookings: []}
+    // this.url = props.url;
   }
 
   componentDidMount(){
@@ -15,6 +16,18 @@ class BookingContainer extends Component {
         this.setState({bookings: data._embedded.bookings})
       })
     }
+
+  // componentDidMount(){
+  //     fetch(this.url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if(data._embedded){
+  //       this.setState({bookings: data._embedded.bookings})
+  //     } else {
+  //       this.setState({bookings: [data]})
+  //     }
+  //     })
+  //   }
 
 
   render() {

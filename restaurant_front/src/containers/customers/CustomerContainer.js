@@ -7,18 +7,26 @@ class CustomerContainer extends Component {
     super(props);
     this.state = {customers: []}
 
+
     this.sortCustomersByBookingCountDesc = this.sortCustomersByBookingCountDesc.bind(this);
     this.sortCustomersByBookingCountAsc = this.sortCustomersByBookingCountAsc.bind(this);
+    this.url = props.url;
+
   }
 
   componentDidMount(){
-      fetch('/customers')
+      fetch(this.url)
       .then((res) => res.json())
       .then((data) => {
+        if(data._embedded){
         this.setState({customers: data._embedded.customers})
-      })
 
-    }
+      } else {
+        this.setState({customers: [data]})
+      }
+    })
+  }
+
 
     sortCustomersByBookingCountDesc(){
     const orderedCustomers =  this.state.customers.sort(function(a, b){
@@ -34,6 +42,7 @@ class CustomerContainer extends Component {
 
 
   render() {
+
     return (
       <div>
       <button  className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>

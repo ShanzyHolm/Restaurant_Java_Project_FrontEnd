@@ -63,16 +63,35 @@ h5.message {
   height: 105pt;
   margin-left: 20pt;
   margin-top: 10pt;
+  border: 5px palegoldenrod;
+  border-style:ridge;
 }
 
 .buttons {
   display: flex;
   justify-content: flex-end;
-  color: black;
   margin-right: 30pt;
 }
 
 .navBar {
   background-color: darkslateblue;
   height: 140pt;
+}
+
+ul.customer-component-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li.customer-component-item {
+  display: inline;
+}
+
+div.customer-component {
+  /* align-content: center; */
+  margin: 23px;
+  padding: 15px;
+  width: 350px;
+  border: 7px darkslateblue;
+  border-style: outset;
 }

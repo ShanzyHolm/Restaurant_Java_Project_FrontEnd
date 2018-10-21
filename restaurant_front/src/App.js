@@ -16,13 +16,12 @@ class App extends Component {
           <NavBar/>
           <Switch>
             <Route exact path="/" component={HomeComponent}/>
-
-
+            <Route exact path="/customers/new" component={CustomerFormContainer}/>
             <Route exact path="/customers" render={() => {
               const url = "/customers";
               return <CustomerContainer url={url}/>
             }}/>
-            <Route exact path="/customers/new" component={CustomerFormContainer}/>
+
             <Route exact path="/customers/:id" render={(props) => {
               const url = "/customers/" + props.match.params.id + "?projection=embedBookings"
               return <CustomerContainer url={url}/>

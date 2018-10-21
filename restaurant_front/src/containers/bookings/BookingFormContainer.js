@@ -33,7 +33,7 @@ class BookingFormContainer extends Component{
       })
     })
     .then(() => {
-      window.location="/customers";
+      window.location="/bookings";
     })
   }
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Form, FormGroup, Col, ControlLabel, FormControl } from 'react-bootstrap';
+import { Form, FormGroup, Col, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class CustomerFormContainer extends Component {
   constructor() {
@@ -23,25 +23,36 @@ class CustomerFormContainer extends Component {
 
   render(){
     return(
-      <div>
-        <Form horizontal onSubmit={this.handleSubmit}>
+      <div className="customerFormContainer">
+        <div className="row">
+          <Form horizontal onSubmit={this.handleSubmit}>
 
-          <FormGroup controlId="customerForm">
-            <Col componentClass={ControlLabel} sm={2}>
-              Name:
-            </Col>
-            <Col sm={5}>
-              <FormControl type="text"placeholder="Name" name="name"/>
-            </Col>
-          </FormGroup>
+            <FormGroup bsSize="large" controlId="customerForm">
+              <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
+                <strong className="font">Name: </strong>
+              </Col>
+              <Col sm={4}>
+                <FormControl type="text"placeholder="Name" name="name"/>
+              </Col>
+            </FormGroup>{' '}
 
-          <FormGroup>
-            <input type="text"placeholder="Contact Number" name="number"/>
-          </FormGroup>
-          <FormGroup>
-            <button type="submit">Save Customer</button>
-          </FormGroup>
-        </Form>
+            <FormGroup bsSize="large" controlId="customerForm">
+              <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
+                <strong className="font">Contact Number: </strong>
+              </Col>
+              <Col sm={4}>
+                <FormControl type="text"placeholder="Contact Number" name="number"/>
+              </Col>
+            </FormGroup>{' '}
+
+            <FormGroup>
+              <Col smOffset={5} sm={5}>
+                <Button className="submit" type="submit">Save Customer</Button>
+              </Col>
+            </FormGroup>
+          </Form>
+        </div>
+        <img className="cutlery" src="/images/cutlery.jpg" alt=""/>
       </div>
         )
         }

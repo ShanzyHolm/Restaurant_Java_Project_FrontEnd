@@ -1,20 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CustFormContainer extends Component {
- // constructor(props){
- //   super(props);
- //   this.state = {ships: []}
- }
+const CustomerFormContainer = () => {
 
- // componentDidMount(){
- //   fetch('/ships')
- //   .then((res) => res.json())
- //   .then((data) => {
- //     this.setState({ships: data._embedded.ships})
- //   })
- // }
-
- handleSubmit(event){
+function handleSubmit(event){
    event.preventDefault();
    fetch("/customers", {
      method: 'POST',
@@ -29,10 +17,8 @@ class CustFormContainer extends Component {
    })
  }
 
- render(){
-
+function render(){
    return(
-
      <div>
        <form onSubmit={this.handleSubmit}>
          <input type="text"placeholder="Name" name="name"/>
@@ -43,6 +29,5 @@ class CustFormContainer extends Component {
    )
  }
 
-}
-
+};
 export default CustomerFormContainer;

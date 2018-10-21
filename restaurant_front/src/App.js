@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import NavBar from './NavBar.js';
 import HomeComponent from './components/HomeComponent';
 import CustomerContainer from './containers/customers/CustomerContainer';
+import CustomerFormContainer from './containers/customers/CustomerFormContainer';
 import BookingContainer from './containers/bookings/BookingContainer';
 
 

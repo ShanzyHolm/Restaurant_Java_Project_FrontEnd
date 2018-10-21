@@ -93,7 +93,7 @@ li.customer-component-item {
 
 div.customer-component {
   /* align-content: center; */
-  margin: 23px;
+  margin: 30px;
   padding: 15px;
   width: 350px;
   border: 7px darkslateblue;
@@ -101,7 +101,7 @@ div.customer-component {
 }
 
 div.customerFormContainer {
-  /* margin-top: 50px; */
+  /* margin-top: 70px; */
   margin: 50px;
   padding: 25px;
   border: 10px darkslateblue;
@@ -120,6 +120,17 @@ button.submit:hover {
   color: white;
 }
 
+button.customer-button {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.customer-button:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
 .font {
   colour: darkslateblue;
 }
@@ -128,4 +139,8 @@ strong.font {
   color: darkslateblue;
   font-size: 20px
   /* font-family: 'Cantarell'; */
+}
+
+.sort-buttons {
+  padding: 15px;
 }

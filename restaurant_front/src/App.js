@@ -4,6 +4,7 @@ import NavBar from './NavBar.js';
 import HomeComponent from './components/HomeComponent';
 import CustomerContainer from './containers/customers/CustomerContainer';
 import CustomerFormContainer from './containers/customers/CustomerFormContainer';
+import BookingFormContainer from './containers/bookings/BookingFormContainer';
 import BookingContainer from './containers/bookings/BookingContainer';
 
 
@@ -27,7 +28,7 @@ class App extends Component {
               return <CustomerContainer url={url}/>
             }}/>
 
-
+            <Route exact path="/bookings/new" component={BookingFormContainer}/>
             <Route exact path="/bookings" component={BookingContainer}/>
 
             {/* <Route exact path="/bookings/:id" render={(props) => {

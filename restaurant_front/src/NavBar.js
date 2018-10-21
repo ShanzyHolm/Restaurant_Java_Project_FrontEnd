@@ -29,7 +29,7 @@ const NavBar = () => {
               <DropdownButton className="booking-buttons" pullRight bsStyle="warning" title="Bookings" id="dropdown-bookings-menu">
                 <MenuItem href="/bookings" bsStyle="warning">View All Bookings</MenuItem>
                 <MenuItem href="." bsStyle="warning">Edit Booking</MenuItem>
-                <MenuItem href="." bsStyle="warning">Create New Booking</MenuItem>
+                <MenuItem href="/bookings/new" bsStyle="warning">Create New Booking</MenuItem>
               </DropdownButton>
 
             </ButtonToolbar>

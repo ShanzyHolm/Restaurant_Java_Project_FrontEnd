@@ -50,6 +50,10 @@ img.home {
   border-width: 10pt;
 }
 
+img.cutlery {
+  border-radius: 10%;
+}
+
 h5.message {
   font-size: 10pt;
   display: flex;
@@ -89,9 +93,54 @@ li.customer-component-item {
 
 div.customer-component {
   /* align-content: center; */
-  margin: 23px;
+  margin: 30px;
   padding: 15px;
   width: 350px;
   border: 7px darkslateblue;
   border-style: outset;
+}
+
+div.customerFormContainer {
+  /* margin-top: 70px; */
+  margin: 50px;
+  padding: 25px;
+  border: 10px darkslateblue;
+  border-style: double;
+  border-radius: 25px ;
+}
+
+button.submit {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.submit:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
+button.customer-button {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.customer-button:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
+.font {
+  colour: darkslateblue;
+}
+
+strong.font {
+  color: darkslateblue;
+  font-size: 20px
+  /* font-family: 'Cantarell'; */
+}
+
+.sort-buttons {
+  padding: 15px;
 }

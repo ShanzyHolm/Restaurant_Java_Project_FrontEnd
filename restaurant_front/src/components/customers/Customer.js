@@ -8,12 +8,13 @@ const Customer = (props) => {
     <div className="customer-component">
       <a href={url}>
         <p className="customer-name">
-          <strong>Name: </strong> {props.customer.name}
+          ({props.customer.id}) <strong>Name: </strong>  {props.customer.name}
         </p>
       </a>
       <p className="customer-number">
         <strong>Phone Number: </strong> {props.customer.number}
       </p>
+      {/* <p className="customer-bookings"><strong>Bookings:  </strong>{props.customer.bookings}</p> */}
     </div>
   )
 }

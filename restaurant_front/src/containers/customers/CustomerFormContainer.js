@@ -37,6 +37,7 @@ class CustFormContainer extends Component {
        <form onSubmit={this.handleSubmit}>
          <input type="text"placeholder="Name" name="name"/>
          <input type="text"placeholder="Contact Number" name="number"/>
+         <button type="submit">Save Customer</button>
        </form>
      </div>
    )

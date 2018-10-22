@@ -23,7 +23,7 @@ class App extends Component {
               return <CustomerContainer url={url}/>
             }}/>
             <Route exact path="/customers/:id/edit" render={(props) => {
-                const url = "customers/" + props.match.params.id + "?projection=embedBookings/edit"
+                const url = "/customers/" + props.match.params.id + "?projection=embedBookings"
                 return <EditCustomerFormContainer url={url}/>
             }}/>
             <Route exact path="/customers/:id" render={(props) => {

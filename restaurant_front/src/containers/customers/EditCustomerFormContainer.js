@@ -5,18 +5,51 @@ class EditCustomerFormContainer extends Component {
   constructor(props){
     super(props);
     this.state = {customers: []}
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+
+  handleChange(event){
+    let value = event.target.value
+    let name = event.target.name
+
+    let customersCopy = Object.assign({}, this.state.customers);
+    customersCopy[name] = value;
+    this.setState({ customers: customersCopy })
+  }
+
+
+  handleSubmit(event){
+    event.preventDefault();
+    fetch(this.props.url, {
+      method: 'PATCH',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        "name": event.target.name.value,
+        "number": event.target.number.value
+      })
+    })
+    .then(() => {
+      window.location="/customers";
+    })
+  }
+
+
+
   componentDidMount(){
-    fetch('/customers')
+    fetch(this.props.url)
     .then((res) => res.json())
     .then((data) => {
-      this.setState({customers: data._embedded.customers})
+      this.setState({customers: data})
       console.log(data);
     })
   }
 
     render(){
+      console.log(this.props.url);
       return(
         <div className="customerFormContainer">
           <div className="row">
@@ -27,7 +60,7 @@ class EditCustomerFormContainer extends Component {
                   <strong className="font">Name: </strong>
                 </Col>
                 <Col sm={4}>
-                  <FormControl type="text"placeholder="Name" name="name"/>
+                  <FormControl type="text" value={this.state.customers.name} onChange={this.handleChange} name="name"/>
                 </Col>
               </FormGroup>{' '}
 
@@ -36,7 +69,7 @@ class EditCustomerFormContainer extends Component {
                   <strong className="font">Contact Number: </strong>
                 </Col>
                 <Col sm={4}>
-                  <FormControl type="text"placeholder="Contact Number" name="number"/>
+                  <FormControl type="text" value={this.state.customers.number} onChange={this.handleChange} name="number"/>
                 </Col>
               </FormGroup>{' '}
 

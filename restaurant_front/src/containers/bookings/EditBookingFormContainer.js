@@ -22,12 +22,12 @@ class EditBookingFormContainer extends Component {
 
   handleSubmit(event){
     event.preventDefault();
+    console.log("submit is: ",event.target.date);
     fetch(this.props.url, {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        "name": event.target.name.value,
-        "number": event.target.number.value
+        "date": event.target.date.value,
       })
     })
     .then(() => {
@@ -39,7 +39,7 @@ class EditBookingFormContainer extends Component {
     fetch(this.props.url)
     .then((res) => res.json())
     .then((data) => {
-      this.setState({customers: data})
+      this.setState({bookings: data})
       console.log(data);
     })
   }
@@ -51,18 +51,11 @@ class EditBookingFormContainer extends Component {
         <div className="row">
           <Form horizontal onSubmit={this.handleSubmit}>
 
-            <FormGroup bsSize="large" controlId="bookingForm">
-              <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
-                <strong className="font">Name: </strong>
-              </Col>
-              <Col sm={4}>
-                <FormControl type="text" value={this.state.bookings.name} onChange={this.handleChange} name="name"/>
-              </Col>
-            </FormGroup>{' '}
+
 
             <FormGroup bsSize="large" controlId="bookingForm">
               <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
-                <strong className="font">Contact Number: </strong>
+                <strong className="font">Change Booking Date: </strong>
               </Col>
               <Col sm={4}>
                 <FormControl type="datetime-local" value={this.state.bookings.date} onChange={this.handleChange} name="date"/>

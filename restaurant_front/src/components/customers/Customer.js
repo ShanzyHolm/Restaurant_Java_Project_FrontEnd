@@ -5,7 +5,7 @@ const Customer = (props) => {
   const url = "/customers/" + props.customer.id
 
   const bookings = props.customer.bookings.map((booking, index) => {
-		return <p key={index}>{booking.date}</p>
+		return <li key={index}>{booking.date}</li>
 	})
 return (
   <div className="customer-component">

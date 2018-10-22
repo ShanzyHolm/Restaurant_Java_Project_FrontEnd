@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CustomerList from './CustomerList';
-import { ButtonToolbar, Button } from 'react-bootstrap';
 
 class CustomerContainer extends Component {
 
@@ -46,14 +45,12 @@ class CustomerContainer extends Component {
 
     return (
       <div>
-        <ButtonToolbar className="sort-buttons">
-          <Button className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</Button>
-          <Button className="customer-button" onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</Button>
-        </ButtonToolbar>
-          <CustomerList customers={this.state.customers}/>
-      </div>
-          )
-          }
+        <button  className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>
+      <button className="customer-button" onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</button>
+      <CustomerList customers={this.state.customers}/>
+    </div>
+    )
+  }
 
 }
 

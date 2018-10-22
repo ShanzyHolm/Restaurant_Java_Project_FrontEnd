@@ -17,11 +17,7 @@ class BookingSearchContainer extends Component{
         "date": event.target.date.value
       })
       .then(() => {
-        array.sort(function(a, b) {
-              a = new Date(a.date);
-              b = new Date(b.date);
-              return a>b ? -1 : a<b ? 1 : 0;
-          });
+        if ("date" == date)
       })
     })
     .then(() => {
@@ -59,6 +55,12 @@ export default BookingSearchContainer;
 //   });
 // }
 
+// array.sort(function(a, b) {
+//       a = new Date(a.date);
+//       b = new Date(b.date);
+//       return a>b ? -1 : a<b ? 1 : 0;
+//   });
+
 // https://stackoverflow.com/questions/16690035/sort-date-in-javascript
 // https://stackoverflow.com/questions/36943900/sorting-and-filtering-on-date
 // https://stackoverflow.com/questions/10123953/sort-javascript-object-array-by-date
@@ -67,3 +69,4 @@ export default BookingSearchContainer;
 // https://www.ag-grid.com/javascript-grid-filter-date/
 // https://www.syncfusion.com/forums/134467/date-range-filter-on-column
 // https://momentjs.com/docs/#/customization/calendar/
+// https://www.npmjs.com/search?q=date%20sorting

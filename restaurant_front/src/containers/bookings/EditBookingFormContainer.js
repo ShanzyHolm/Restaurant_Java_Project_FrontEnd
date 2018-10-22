@@ -4,7 +4,7 @@ import { Form, FormGroup, Col, ControlLabel, FormControl, Button } from 'react-b
 class EditBookingFormContainer extends Component {
   constructor(props){
     super(props);
-    this.state = {bookings: []}
+    this.state = {bookings: null}
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,17 +40,23 @@ class EditBookingFormContainer extends Component {
     .then((res) => res.json())
     .then((data) => {
       this.setState({bookings: data})
-      console.log(data);
+      console.log("data is:", data.customer.name);
     })
   }
 
   render(){
-    console.log(this.props.url);
+    if (!this.state.bookings) return null;
+
     return(
       <div className="bookingFormContainer">
         <div className="row">
           <Form horizontal onSubmit={this.handleSubmit}>
 
+            <FormGroup bsSize="large" controlId="bookingForm">
+              <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
+                <strong className="font">Booking Customer: {this.state.bookings.customer.name} </strong>
+              </Col>
+            </FormGroup>{' '}
 
 
             <FormGroup bsSize="large" controlId="bookingForm">
@@ -61,6 +67,9 @@ class EditBookingFormContainer extends Component {
                 <FormControl type="datetime-local" value={this.state.bookings.date} onChange={this.handleChange} name="date"/>
               </Col>
             </FormGroup>{' '}
+
+
+
 
             <FormGroup>
               <Col smOffset={5} sm={5}>

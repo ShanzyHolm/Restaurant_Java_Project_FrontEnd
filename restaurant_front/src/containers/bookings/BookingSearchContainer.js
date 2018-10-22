@@ -4,8 +4,9 @@ class BookingSearchContainer extends Component{
 
   constructor(props){
     super(props);
-    this.state = {customers: [], tables: []}
+    this.state = []
   }
+
 
   handleSubmit(event){
     event.preventDefault();
@@ -47,3 +48,22 @@ class BookingSearchContainer extends Component{
 }
 
 export default BookingSearchContainer;
+
+
+
+// RESEARCH TO TRY AND SOLVE SORT BY DATE
+
+// orderByDate(arr, dateProp) {
+//   return arr.slice().sort(function (a, b) {
+//     return a[dateProp] < b[dateProp] ? -1 : 1;
+//   });
+// }
+
+// https://stackoverflow.com/questions/16690035/sort-date-in-javascript
+// https://stackoverflow.com/questions/36943900/sorting-and-filtering-on-date
+// https://stackoverflow.com/questions/10123953/sort-javascript-object-array-by-date
+// https://stackoverflow.com/questions/10123953/sort-javascript-object-array-by-date
+// https://www.youtube.com/watch?v=uBoZpm4eYL8
+// https://www.ag-grid.com/javascript-grid-filter-date/
+// https://www.syncfusion.com/forums/134467/date-range-filter-on-column
+// https://momentjs.com/docs/#/customization/calendar/

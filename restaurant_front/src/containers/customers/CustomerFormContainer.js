@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { Form, FormGroup, Col, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 class CustomerFormContainer extends Component {
-  constructor() {
-    super();
-  }
+
+
+
 
   handleSubmit(event){
     event.preventDefault();
@@ -44,7 +44,7 @@ class CustomerFormContainer extends Component {
                 <FormControl type="text"placeholder="Contact Number" name="number"/>
               </Col>
             </FormGroup>{' '}
-
+            
             <FormGroup>
               <Col smOffset={5} sm={5}>
                 <Button className="submit" type="submit">Save Customer</Button>
@@ -54,8 +54,8 @@ class CustomerFormContainer extends Component {
         </div>
         <img className="cutlery" src="/images/cutlery.jpg" alt=""/>
       </div>
-        )
-        }
+    )
+  }
 
-        };
-        export default CustomerFormContainer;
+};
+export default CustomerFormContainer;

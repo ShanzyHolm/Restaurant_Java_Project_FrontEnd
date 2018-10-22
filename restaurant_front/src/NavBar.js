@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import { Button, ButtonToolbar, ButtonGroup, Navbar, Nav, NavItem, Image, DropdownButton, MenuItem, Grid, Row, Col } from 'react-bootstrap';
+import { Button, ButtonToolbar, ButtonGroup, Image, DropdownButton, MenuItem, Grid, Row } from 'react-bootstrap';
 
 const NavBar = () => {
   return (

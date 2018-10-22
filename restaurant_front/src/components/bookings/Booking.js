@@ -4,7 +4,7 @@ import moment from 'moment';
 const Booking = (props) => {
 
   let date = new Date(props.booking.date);
-  let formattedDate = moment(date).format("DD/MM/YY");
+  let formattedDate = moment(date).format("DD/MM/YY HH:mm");
 
   // const url = "/bookings/" + props.booking.id
   return (

@@ -1,12 +1,17 @@
 import React from 'react';
+import moment from 'moment';
 
 const Customer = (props) => {
 
   const url = "/customers/" + props.customer.id
 
   const bookings = props.customer.bookings.map((booking, index) => {
-		return <li key={index}>{booking.date}</li>
+    console.log(booking);
+    let date = new Date(booking.date);
+    let formattedDate = moment(date).format("DD/MM/YY HH:mm");
+    return <li key={index}>{formattedDate}</li>
 	})
+
 return (
   <div className="customer-component">
     <a href={url}>

@@ -4,6 +4,7 @@ import moment from 'moment';
 const Customer = (props) => {
 
   const url = "/customers/" + props.customer.id
+  const editUrl = "/customers/" + props.customer.id + "/edit"
 
   const bookings = props.customer.bookings.map((booking, index) => {
     console.log(booking);
@@ -23,6 +24,9 @@ return (
       <strong>Phone Number: </strong> {props.customer.number}
     </p>
     <p className="customer-bookings"><strong>Bookings:  </strong>{bookings}</p>
+    <a href={editUrl}>
+      <p>Edit Customer Details</p>
+    </a>
   </div>
 )
 	}

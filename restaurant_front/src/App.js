@@ -4,6 +4,7 @@ import NavBar from './NavBar.js';
 import HomeComponent from './components/HomeComponent';
 import CustomerContainer from './containers/customers/CustomerContainer';
 import CustomerFormContainer from './containers/customers/CustomerFormContainer';
+import EditCustomerFormContainer from './containers/customers/EditCustomerFormContainer';
 import BookingFormContainer from './containers/bookings/BookingFormContainer';
 import BookingContainer from './containers/bookings/BookingContainer';
 
@@ -21,7 +22,10 @@ class App extends Component {
               const url = "/customers";
               return <CustomerContainer url={url}/>
             }}/>
-
+            <Route exact path="/customers/:id/edit" render={(props) => {
+                const url = "/customers/" + props.match.params.id + "?projection=embedBookings"
+                return <EditCustomerFormContainer url={url}/>
+            }}/>
             <Route exact path="/customers/:id" render={(props) => {
               const url = "/customers/" + props.match.params.id + "?projection=embedBookings"
               return <CustomerContainer url={url}/>

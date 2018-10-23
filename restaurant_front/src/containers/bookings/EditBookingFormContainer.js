@@ -68,14 +68,12 @@ class EditBookingFormContainer extends Component {
               </Col>
             </FormGroup>{' '}
 
-
-
-
             <FormGroup>
               <Col smOffset={5} sm={5}>
                 <Button className="submit" type="submit">Save Edited Details</Button>
               </Col>
             </FormGroup>
+            
           </Form>
         </div>
         <img className="cutlery" src="/images/cutlery.jpg" alt=""/>

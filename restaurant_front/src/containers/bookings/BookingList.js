@@ -7,21 +7,23 @@ const BookingList = (props) => {
   const filteredFormattedDate = moment(props.searchDate).format("DD-MM-YY")
 
   const allBookings = props.bookings.map((booking) => {
-    return (<li key={booking.id} className="booking-component-item">
+    return (<li  key={booking.id} className="booking-component-item">
       <Booking booking={booking} />
     </li>
   )
   })
 
   const selectedBooking = allBookings.filter((booking) => {
-    const filteredBooking = moment(booking.date).format("DD-MM-YY");
-    if (filteredBooking === filteredFormattedDate){
+    const filteredBookingDate = moment(booking.props.children.props.booking.date).format("DD-MM-YY");
+    if (filteredBookingDate === filteredFormattedDate){
       return <Booking booking={booking} key={booking.id} />
     }
-
   })
 
+console.log("filteredFormattedDate is:", filteredFormattedDate);
+console.log("allBookings is:", allBookings);
   return (
+
     <ul className="booking-component-list">
       {selectedBooking}
     </ul>

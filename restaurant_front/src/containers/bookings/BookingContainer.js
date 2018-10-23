@@ -8,7 +8,7 @@ class BookingContainer extends Component {
 
   constructor(props){
     super(props);
-    this.state = {bookings: [], searchDate: moment()};
+    this.state = {bookings: [], searchDate: null};
     this.handleChange = this.handleChange.bind(this);
   }
 

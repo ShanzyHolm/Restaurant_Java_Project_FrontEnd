@@ -115,10 +115,12 @@ h5.message {
 
 div.customer-sort {
   position: relative;
+  left: 20pt;
   top: 150pt;
 }
 
 button.customer-button {
+
   background-color: darkslateblue;
   color: white;
 }

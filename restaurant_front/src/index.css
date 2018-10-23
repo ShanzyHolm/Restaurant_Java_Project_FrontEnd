@@ -42,7 +42,7 @@ header {
 
 h1 {
   font-size: 40pt;
-  top: 40px;
+  margin-top: 70px;
   justify-content: center;
   display: -webkit-flex;
   display:         flex;

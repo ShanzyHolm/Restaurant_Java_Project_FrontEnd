@@ -35,8 +35,8 @@ const NavBar = () => {
             </ButtonToolbar>
           </Row>
           <Row className="row1">
-            <h1>Welcome to Cafe</h1>
-            <h1 className="error">503</h1>
+            <h1>Welcome to Cafe 503</h1>
+            {/* <h1 className="error">503</h1> */}
           </Row>
           </Grid>
 

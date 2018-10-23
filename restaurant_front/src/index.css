@@ -42,26 +42,27 @@ header {
 }
 
 h1 {
-  font-size: 25pt;
+  font-size: 40pt;
   top: 40px;
+  justify-content: center;
   display: -webkit-flex;
   display:         flex;
   -webkit-align-items: center;
-  align-items: center;
+          align-items: center;
   -webkit-justify-content: center;
-  justify-content: center;
+          justify-content: center;
   color: goldenrod;
   /* position: relative; */
   font-family: 'Press Start 2P', cursive;
 }
 
-h1.error {
+/* h1.error {
   font-size: 42pt;
   color: goldenrod;
   position: relative;
   top: 30px;
   font-family: 'Press Start 2P', cursive;
-}
+} */
 
 .logo {
   height: 105pt;
@@ -89,10 +90,10 @@ div.vertical-container {
 }
 
 img.home {
-  height: 48%;
+  height: 43%;
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin-top: 50px;
   border-radius: 20%;

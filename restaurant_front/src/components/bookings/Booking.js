@@ -1,3 +1,5 @@
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css'
 import React from 'react';
 import moment from 'moment';
 
@@ -10,14 +12,29 @@ const Booking = (props) => {
   let formattedDate = moment(date).format("DD/MM/YY HH:mm");
 
   const deleteBooking = function(event) {
-    fetch(url, {
-      method: 'DELETE',
-      headers: {'Content-Type': 'application/json'}
+    confirmAlert({
+      title: 'Confirm to submit',
+      message: 'Are you sure to do this.',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () =>
+          fetch(url, {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'}
+          })
+          .then(() => {
+            window.location="/bookings"
+          })
+          .catch(err => console.error(err))
+        },
+        {
+          label: 'No',
+          onClick: () => alert('Booking not deleted')
+        }
+      ]
     })
-    .then(() => {
-      window.location="/bookings"
-    })
-    .catch(err => console.error(err))
+
   }
 
   return (

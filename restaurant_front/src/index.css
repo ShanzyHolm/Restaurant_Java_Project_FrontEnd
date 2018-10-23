@@ -33,8 +33,7 @@ header {
 .buttons {
   position: fixed;
   right: 40pt;
-  top: 100pt;
-
+  top: 10pt;
 }
 
 .header-grid {
@@ -43,7 +42,7 @@ header {
 
 h1 {
   font-size: 40pt;
-  top: 40px;
+  margin-top: 70px;
   justify-content: center;
   display: -webkit-flex;
   display:         flex;
@@ -116,6 +115,7 @@ h5.message {
 
 div.customer-sort {
   position: relative;
+  left: 20pt;
   top: 150pt;
 }
 
@@ -138,15 +138,40 @@ ul.customer-component-list {
 
 /* CUSTOMER FORM */
 
+div.customerFormContainer {
+  position: relative;
+  left: 50pt;
+  top: 150pt;
+  right: 100pt;
+  width: 80%;
+  margin: 50px;
+  padding: 25px;
+  border: 10px darkslateblue;
+  border-style: double;
+  border-radius: 25px ;
+}
+
 img.cutlery {
   border-radius: 10%;
 }
 
 li {
-
+  list-style: none;
+  padding-left: 4pt;
 }
 
+button.submit {
+  background-color: darkslateblue;
+  color: white;
+}
 
+button.submit:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
+/* BOOKINGS CSS */
 
 li.customer-component-item {
   display: inline;
@@ -161,25 +186,9 @@ div.customer-component {
   border-style: outset;
 }
 
-div.customerFormContainer {
-  /* margin-top: 70px; */
-  margin: 50px;
-  padding: 25px;
-  border: 10px darkslateblue;
-  border-style: double;
-  border-radius: 25px ;
-}
 
-button.submit {
-  background-color: darkslateblue;
-  color: white;
-}
 
-button.submit:hover {
-  background-color: slateblue;
-  border: 1px solid darkslateblue;
-  color: white;
-}
+
 
 
 

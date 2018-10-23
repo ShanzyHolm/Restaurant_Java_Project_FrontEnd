@@ -25,7 +25,7 @@ class CustomerFormContainer extends Component {
     return(
       <div className="customerFormContainer">
         <div className="row">
-          <Form horizontal onSubmit={this.handleSubmit}>
+          <Form horizontal className="customerForm" onSubmit={this.handleSubmit}>
 
             <FormGroup bsSize="large" controlId="customerForm">
               <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
@@ -44,7 +44,7 @@ class CustomerFormContainer extends Component {
                 <FormControl type="text"placeholder="Contact Number" name="number"/>
               </Col>
             </FormGroup>{' '}
-            
+
             <FormGroup>
               <Col smOffset={5} sm={5}>
                 <Button className="submit" type="submit">Save Customer</Button>

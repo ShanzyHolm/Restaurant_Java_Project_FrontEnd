@@ -32,8 +32,9 @@ header {
 
 .buttons {
   position: fixed;
-  right: 0;
+  right: 40pt;
   top: 140pt;
+
 }
 
 .header-grid {
@@ -112,6 +113,24 @@ h5.message {
 
 /* CUSTOMER CSS */
 
+div.customer-sort {
+  position: relative;
+  top: 150pt;
+}
+
+button.customer-button {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.customer-button:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
+/* CUSTOMER FORM */
+
 img.cutlery {
   border-radius: 10%;
 }
@@ -158,16 +177,7 @@ button.submit:hover {
   color: white;
 }
 
-button.customer-button {
-  background-color: darkslateblue;
-  color: white;
-}
 
-button.customer-button:hover {
-  background-color: slateblue;
-  border: 1px solid darkslateblue;
-  color: white;
-}
 
 .font {
   colour: darkslateblue;

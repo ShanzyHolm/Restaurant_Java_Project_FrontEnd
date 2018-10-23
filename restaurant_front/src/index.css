@@ -33,7 +33,7 @@ header {
 .buttons {
   position: fixed;
   right: 0;
-  top: 0;
+  top: 140pt;
 }
 
 .header-grid {
@@ -42,7 +42,7 @@ header {
 
 h1 {
   font-size: 25pt;
-  top: 25px;
+  top: 40px;
   display: -webkit-flex;
   display:         flex;
   -webkit-align-items: center;
@@ -50,7 +50,7 @@ h1 {
   -webkit-justify-content: center;
   justify-content: center;
   color: goldenrod;
-  position: relative;
+  /* position: relative; */
   font-family: 'Press Start 2P', cursive;
 }
 

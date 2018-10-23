@@ -20,43 +20,76 @@ code {
 /* HEADER AND NAVIGATION BAR */
 
 header {
-  position: absolute;
-  /* display: flex; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
   background-color: darkslateblue;
   height: 140pt;
-  /* width: 100%; */
+  width: 100%;
+}
+
+.buttons {
+  position: fixed;
+  right: 40pt;
+  top: 100pt;
+
+}
+
+.header-grid {
+  margin-left: 0;
 }
 
 h1 {
   font-size: 25pt;
-  /* display: flex; */
+  top: 40px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   color: goldenrod;
-  position: relative;
-  left: 30%;
+  /* position: relative; */
   font-family: 'Press Start 2P', cursive;
 }
 
 h1.error {
   font-size: 42pt;
-  /* display: flex; */
   color: goldenrod;
   position: relative;
-  top: 12%;
-  left: 42%;
+  top: 30px;
   font-family: 'Press Start 2P', cursive;
 }
 
-h5.message {
-  font-size: 10pt;
-  display: flex;
-  color: darkslateblue;
-  position: fixed;
-  top: 80%;
-  left: 25%;
+.logo {
+  height: 105pt;
+  margin-left: 20pt;
+  margin-top: 10pt;
+  border: 5px palegoldenrod;
+  border-style:ridge;
+}
+
+.navBar {
+  /* background-color: darkslateblue;
+  height: 140pt;
+  width: 100%; */
+}
+
+/* HOME SCREEN */
+div.vertical-container {
+  top: 400pt;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
 }
 
 img.home {
-  height: 250pt;
+  height: 48%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -68,28 +101,41 @@ img.home {
   border-width: 10pt;
 }
 
-.logo {
-  height: 105pt;
-  margin-left: 20pt;
-  margin-top: 10pt;
-  border: 5px palegoldenrod;
-  border-style:ridge;
-}
+h5.message {
 
-.buttons {
+  font-size: 10pt;
+  display: flex;
   position: fixed;
-  right: 0;
-  top: 0;
+  bottom: 40px;
+  color: darkslateblue;
+  position: fixed;
 }
-
-.navBar {
-  /* background-color: darkslateblue;
-  height: 140pt;
-  width: 100%; */
-}
-
 
 /* CUSTOMER CSS */
+
+div.customer-sort {
+  position: relative;
+  top: 150pt;
+}
+
+button.customer-button {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.customer-button:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
+}
+
+ul.customer-component-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CUSTOMER FORM */
 
 img.cutlery {
   border-radius: 10%;
@@ -99,10 +145,7 @@ li {
 
 }
 
-ul.customer-component-list {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 li.customer-component-item {
   display: inline;
@@ -137,16 +180,7 @@ button.submit:hover {
   color: white;
 }
 
-button.customer-button {
-  background-color: darkslateblue;
-  color: white;
-}
 
-button.customer-button:hover {
-  background-color: slateblue;
-  border: 1px solid darkslateblue;
-  color: white;
-}
 
 .font {
   colour: darkslateblue;

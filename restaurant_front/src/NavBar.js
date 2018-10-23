@@ -6,6 +6,7 @@ const NavBar = () => {
 
       <header className="navBar">
 
+        Grid
         <div>
           <Image src="/images/Cafe503Logo.jpg" alt="CafeLogo" className="logo" rounded />
         </div>
@@ -16,17 +17,17 @@ const NavBar = () => {
             <ButtonToolbar className="buttons">
 
               <ButtonGroup className="home-button">
-                <Button href="/" bsStyle="warning">Home</Button>
+                <Button href="/" bsStyle="warning" bsSize="large">Home</Button>
               </ButtonGroup>
 
-              <DropdownButton className="customer-buttons" pullRight bsStyle="warning" title="Customers" id="dropdown-customers-menu">
-                <MenuItem href="/customers" bsStyle="warning">View All Customers</MenuItem>
+              <DropdownButton className="customer-buttons" pullRight bsStyle="warning" bsSize="large" title="Customers" id="dropdown-customers-menu">
+                <MenuItem href="/customers" bsStyle="warning" >View All Customers</MenuItem>
                 {/* <MenuItem href="." bsStyle="warning">Edit Customer</MenuItem>x */}
                 <MenuItem href="/customers/new" bsStyle="warning">Create New Customer</MenuItem>
               </DropdownButton>
 
-              <DropdownButton className="booking-buttons" pullRight bsStyle="warning" title="Bookings" id="dropdown-bookings-menu">
-                <MenuItem href="/bookings" bsStyle="warning">View All Bookings</MenuItem>
+              <DropdownButton className="booking-buttons" pullRight bsStyle="warning" bsSize="large" title="Bookings" id="dropdown-bookings-menu">
+                <MenuItem href="/bookings" bsStyle="warning" >View All Bookings</MenuItem>
                 {/* <MenuItem href="." bsStyle="warning">Edit Booking</MenuItem> */}
                 <MenuItem href="/bookings/new" bsStyle="warning">Create New Booking</MenuItem>
               </DropdownButton>

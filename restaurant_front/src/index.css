@@ -1,3 +1,5 @@
+/* MAIN CSS */
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +21,8 @@ code {
     monospace;
 }
 
+/* HEADER AND NAVIGATION BAR */
+
 header {
   display: flex;
 }
@@ -27,7 +31,7 @@ h1 {
   font-size: 25pt;
   display: flex;
   color: goldenrod;
-  position: static;
+  position: relative;
   left: 30%;
   font-family: 'Press Start 2P', cursive;
 }
@@ -36,7 +40,7 @@ h1.error {
   font-size: 42pt;
   display: flex;
   color: goldenrod;
-  position: static;
+  position: relative;
   top: 12%;
   left: 42%;
   font-family: 'Press Start 2P', cursive;
@@ -55,6 +59,23 @@ img.home {
   border-width: 10pt;
 }
 
+.logo {
+  height: 105pt;
+  margin-left: 20pt;
+  margin-top: 10pt;
+  border: 5px palegoldenrod;
+  border-style:ridge;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-right: 30pt; */
+}
+
+
+/* CUSTOMER CSS */
+
 img.cutlery {
   border-radius: 10%;
 }
@@ -72,19 +93,7 @@ li {
 
 }
 
-.logo {
-  height: 105pt;
-  margin-left: 20pt;
-  margin-top: 10pt;
-  border: 5px palegoldenrod;
-  border-style:ridge;
-}
 
-.buttons {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 30pt;
-}
 
 .navBar {
   background-color: darkslateblue;

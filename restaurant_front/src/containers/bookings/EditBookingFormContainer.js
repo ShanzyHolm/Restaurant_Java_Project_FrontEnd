@@ -73,7 +73,7 @@ class EditBookingFormContainer extends Component {
 
             <FormGroup>
               <Col smOffset={5} sm={5}>
-                <Button className="submit" type="submit">Save Edited Details</Button>
+                <Button className="submit" type="submit">Update Details</Button>
               </Col>
             </FormGroup>
           </Form>

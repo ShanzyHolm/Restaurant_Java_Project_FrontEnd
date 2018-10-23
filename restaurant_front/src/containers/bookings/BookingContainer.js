@@ -35,7 +35,7 @@ class BookingContainer extends Component {
     // console.log(this.state.bookings);
     return (
       <grid>
-        <BookingSearchContainer/>
+        {/* <BookingSearchContainer/> */}
         <BookingList bookings={this.state.bookings}/>
       </grid>
     )

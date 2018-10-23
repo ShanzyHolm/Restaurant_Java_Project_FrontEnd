@@ -11,10 +11,6 @@ body {
   background-color: palegoldenrod;
 }
 
-#main {
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -24,12 +20,16 @@ code {
 /* HEADER AND NAVIGATION BAR */
 
 header {
-  display: flex;
+  position: absolute;
+  /* display: flex; */
+  background-color: darkslateblue;
+  height: 140pt;
+  /* width: 100%; */
 }
 
 h1 {
   font-size: 25pt;
-  display: flex;
+  /* display: flex; */
   color: goldenrod;
   position: relative;
   left: 30%;
@@ -38,7 +38,7 @@ h1 {
 
 h1.error {
   font-size: 42pt;
-  display: flex;
+  /* display: flex; */
   color: goldenrod;
   position: relative;
   top: 12%;
@@ -77,14 +77,15 @@ img.home {
 }
 
 .buttons {
-  display: flex;
-  justify-content: flex-end;
-  /* margin-right: 30pt; */
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 .navBar {
-  background-color: darkslateblue;
+  /* background-color: darkslateblue;
   height: 140pt;
+  width: 100%; */
 }
 
 

@@ -33,7 +33,7 @@ header {
 .buttons {
   position: fixed;
   right: 40pt;
-  top: 140pt;
+  top: 100pt;
 
 }
 
@@ -129,6 +129,12 @@ button.customer-button:hover {
   color: white;
 }
 
+ul.customer-component-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* CUSTOMER FORM */
 
 img.cutlery {
@@ -139,10 +145,7 @@ li {
 
 }
 
-ul.customer-component-list {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 li.customer-component-item {
   display: inline;

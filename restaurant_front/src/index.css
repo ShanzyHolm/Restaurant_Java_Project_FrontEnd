@@ -33,8 +33,7 @@ header {
 .buttons {
   position: fixed;
   right: 40pt;
-  top: 100pt;
-
+  top: 10pt;
 }
 
 .header-grid {

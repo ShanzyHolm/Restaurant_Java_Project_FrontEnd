@@ -4,38 +4,41 @@ class BookingSearchContainer extends Component{
 
   constructor(props){
     super(props);
-    this.state = []
+    // this.state = []
   }
 
 
-  handleSubmit(event){
-    event.preventDefault();
-    fetch("/bookings", {
-      method: 'GET',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        "date": event.target.date.value
-      })
-      .then(() => {
-        if ("date" == date)
-      })
-    })
-    .then(() => {
-      window.location="/bookings/date/";
-    })
-  }
+  // handleSubmit(event){
+  //   event.preventDefault();
+  //   fetch("/bookings", {
+  //     method: 'GET',
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: JSON.stringify({
+  //       "date": event.target.date.value
+  //     })
+  //     .then(() => {
+  //       if ("date" == date)
+  //     })
+  //   })
+  //   .then(() => {
+  //     window.location="/bookings/date/";
+  //   })
+  // }
 
 
   render(){
 
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <p>
+          Hello Filter!
+        </p>
+        {/* <form onSubmit={this.handleSubmit}>
           <label for="date">Search By Date: </label>
           <input id="date" type="date-local"  required/>
 
           <button type="submit">Search</button>
-        </form>
+        </form> */}
       </div>
     )
   }

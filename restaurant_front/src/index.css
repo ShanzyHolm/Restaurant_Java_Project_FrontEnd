@@ -9,6 +9,11 @@ body {
   background-color: palegoldenrod;
 }
 
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -22,7 +27,7 @@ h1 {
   font-size: 25pt;
   display: flex;
   color: goldenrod;
-  position: fixed;
+  position: static;
   left: 30%;
   font-family: 'Press Start 2P', cursive;
 }
@@ -31,7 +36,7 @@ h1.error {
   font-size: 42pt;
   display: flex;
   color: goldenrod;
-  position: fixed;
+  position: static;
   top: 12%;
   left: 42%;
   font-family: 'Press Start 2P', cursive;

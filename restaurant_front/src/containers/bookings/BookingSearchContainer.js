@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 class BookingSearchContainer extends Component{
 
   constructor(props){

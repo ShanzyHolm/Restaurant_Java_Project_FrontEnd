@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import BookingList from './BookingList';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import moment from 'moment';
 
 class BookingContainer extends Component {
 
   constructor(props){
     super(props);
-    this.state = {bookings: []}
-    // this.url = props.url;
+    this.state = {bookings: [], searchDate: moment()};
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount(){
@@ -17,23 +20,19 @@ class BookingContainer extends Component {
       })
     }
 
-  // componentDidMount(){
-  //     fetch(this.url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       if(data._embedded){
-  //       this.setState({bookings: data._embedded.bookings})
-  //     } else {
-  //       this.setState({bookings: [data]})
-  //     }
-  //     })
-  //   }
+    handleChange(targetDate){
+      this.setState({searchDate: targetDate})
+    }
 
 
   render() {
-    // console.log(this.state.bookings);
     return (
-      <BookingList bookings={this.state.bookings}/>
+      <div>
+      <div>
+        <DatePicker className="date-picker" selected={this.state.date} onChange={this.handleChange}/>
+    </div>
+          <BookingList bookings={this.state.bookings} searchDate={this.state.searchDate}/>
+    </div>
     )
   }
 

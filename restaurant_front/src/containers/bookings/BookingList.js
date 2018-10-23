@@ -11,23 +11,38 @@ const BookingList = (props) => {
       <Booking booking={booking} />
     </li>
   )
-  })
+})
 
-  const selectedBooking = allBookings.filter((booking) => {
-    const filteredBookingDate = moment(booking.props.children.props.booking.date).format("DD-MM-YY");
-    if (filteredBookingDate === filteredFormattedDate){
-      return <Booking booking={booking} key={booking.id} />
-    }
-  })
+const selectedBooking = allBookings.filter((booking) => {
+  const filteredBookingDate = moment(booking.props.children.props.booking.date).format("DD-MM-YY");
+  if (filteredBookingDate === filteredFormattedDate){
+    return <Booking booking={booking} key={booking.id} />
+  }
+})
 
-console.log("filteredFormattedDate is:", filteredFormattedDate);
-console.log("allBookings is:", allBookings);
+if(props.searchDate === null){
   return (
+<div>
+    <h2> All bookings: </h2>
+    <ul className="booking-component-list">
+      {allBookings}
+    </ul>
+
+  </div>
+  )
+}
+else{
+  return (
+    <div>
+        <h2> All bookings for {filteredFormattedDate}: </h2>
+
 
     <ul className="booking-component-list">
       {selectedBooking}
     </ul>
+  </div>
   )
+}
 }
 
 export default BookingList;

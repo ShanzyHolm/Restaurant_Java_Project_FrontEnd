@@ -46,6 +46,15 @@ h1.error {
   font-family: 'Press Start 2P', cursive;
 }
 
+h5.message {
+  font-size: 10pt;
+  display: flex;
+  color: darkslateblue;
+  position: fixed;
+  top: 80%;
+  left: 25%;
+}
+
 img.home {
   height: 250pt;
   position: fixed;
@@ -73,6 +82,11 @@ img.home {
   /* margin-right: 30pt; */
 }
 
+.navBar {
+  background-color: darkslateblue;
+  height: 140pt;
+}
+
 
 /* CUSTOMER CSS */
 
@@ -80,24 +94,8 @@ img.cutlery {
   border-radius: 10%;
 }
 
-h5.message {
-  font-size: 10pt;
-  display: flex;
-  color: darkslateblue;
-  position: fixed;
-  top: 80%;
-  left: 25%;
-}
-
 li {
 
-}
-
-
-
-.navBar {
-  background-color: darkslateblue;
-  height: 140pt;
 }
 
 ul.customer-component-list {

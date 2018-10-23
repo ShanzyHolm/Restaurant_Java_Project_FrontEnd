@@ -30,7 +30,6 @@ class BookingContainer extends Component {
     this.setState({searchDate: null})
   }
 
-
   render() {
     return (
       <div>

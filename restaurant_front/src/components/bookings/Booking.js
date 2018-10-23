@@ -12,7 +12,10 @@ const Booking = (props) => {
   return (
     <div className="booking-component">
       {/* <a href={url}> */}
-      <h2>{props.booking.id} {formattedDate}</h2>
+      <h4><strong>Booking Reference Number:</strong> {props.booking.id}</h4>
+      <h5><strong>Date:</strong> {formattedDate}</h5>
+      <h5><strong>Customer Name:</strong> {props.booking.customer.name}</h5>
+      <h5><strong>Table Booked:</strong> </h5>
       <a href={editUrl}>Edit Booking</a>
     </div>
   )

@@ -20,11 +20,20 @@ code {
 /* HEADER AND NAVIGATION BAR */
 
 header {
-  position: absolute;
-  /* display: flex; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
   background-color: darkslateblue;
   height: 140pt;
-  /* width: 100%; */
+  width: 100%;
+}
+
+.buttons {
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 h1 {
@@ -74,12 +83,6 @@ img.home {
   margin-top: 10pt;
   border: 5px palegoldenrod;
   border-style:ridge;
-}
-
-.buttons {
-  position: fixed;
-  right: 0;
-  top: 0;
 }
 
 .navBar {

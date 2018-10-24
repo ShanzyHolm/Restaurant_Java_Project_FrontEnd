@@ -5,7 +5,7 @@ import Booking from '../../components/bookings/Booking.js';
 const BookingList = (props) => {
 
   const filteredFormattedDate = moment(props.searchDate).format("DD-MM-YY")
-
+  console.log(moment(props.searchDate));
   const allBookings = props.bookings.map((booking) => {
     return (<li  key={booking.id} className="booking-component-item">
       <Booking booking={booking} />

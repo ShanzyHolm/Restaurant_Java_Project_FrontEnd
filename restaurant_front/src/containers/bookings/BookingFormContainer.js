@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Form, FormGroup, Col, ControlLabel, FormControl, Button, FieldGroup } from 'react-bootstrap';
 
 class BookingFormContainer extends Component{
 
@@ -52,50 +51,25 @@ class BookingFormContainer extends Component{
 
     return(
       <div className="bookingFormContainer">
-        <Form horizontal onSubmit={this.handleSubmit}>
+        <div>
+          <form className="bookingForm" onSubmit={this.handleSubmit}>
+            <label for="date">Select Date & Time:</label>
+            <input id="date" type="datetime-local" name="time_stamp"  required/>
 
-          <FormGroup bsSize="large" controlId="bookingForm">
-            <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
-              <strong className="font"for="date">Select Date & Time </strong>
-            </Col>
-            <Col sm={4}> {' '}
-              <FormControl className="date" id="date" type="datetime-local" name="time_stamp"  required/>
-            </Col>
-          </FormGroup>
+            <select default="Select Customer" name="customer" id="customer">
+              <option value="" disabled selected required>Select Customer</option>
+              {customerOptions}
+            </select>
+            <select name="table" id="table">
+              <option value="" disabled selected required>Select Table</option>
+              {tableOptions}
+            </select>
 
-          <FormGroup bsSize="large" controlId="bookingForm">
-            <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
-              <strong className="font">Select Customer: </strong>
-            </Col>
-            <Col className="select" default="Select Customer" name="customer" id="customer" sm={4}> {' '}
-              <FormControl componentClass="select" placeholder="select">
-                <option value="" disabled selected required>Select Customer</option>
-                {customerOptions}
-              </FormControl>
-            </Col>
-          </FormGroup>{' '}
-
-          <FormGroup bsSize="large" controlId="bookingForm">
-            <Col className="font" componentClass={ControlLabel} smOffset={1} sm={4}> {' '}
-              <strong className="font">Select Table: </strong>
-            </Col>
-            <Col className="select" default="Select Table" name="table" id="table" sm={4}>
-              <FormControl componentClass="select" placeholder="select">
-                <option value="" disabled selected required>Select Table</option>
-                {tableOptions}
-              </FormControl>
-            </Col>
-          </FormGroup>{' '}
-
-          <FormGroup>
-            <Col smOffset={5} sm={5}>
-              <Button className="submit" type="submit">Save</Button>
-            </Col>
-          </FormGroup>
-        </Form>
-        <img className="cutlery" src="/images/cutlery.jpg" alt=""/>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+          <img className="cutlery" src="/images/cutlery.jpg" alt=""/>
       </div>
-
     )
   }
 

@@ -11,9 +11,12 @@ const CustomerList = (props) => {
   })
 
   return (
+    <div>
+    <h2 className="customer-message"> All Customers: </h2>
     <ul className="customer-component-list">
       {allCustomers}
     </ul>
+        </div>
   )
 }
 

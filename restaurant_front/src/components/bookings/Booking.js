@@ -11,30 +11,33 @@ const Booking = (props) => {
   let date = new Date(props.booking.date);
   let formattedDate = moment.utc(date).format("DD/MM/YY HH:mm");
 
+
+const handleClickDelete = function(){
+  fetch(url, {
+          method: 'DELETE',
+          headers: {'Content-Type': 'application/json'}
+        })
+        .then(() => {
+          window.location="/bookings"
+        })
+        .catch(err => console.error(err))
+      }
+
   const deleteBooking = function(event) {
     confirmAlert({
-      title: 'Confirm to submit',
-      message: 'Are you sure to do this.',
-      buttons: [
-        {
-          label: 'Yes',
-          onClick: () =>
-          fetch(url, {
-            method: 'DELETE',
-            headers: {'Content-Type': 'application/json'}
-          })
-          .then(() => {
-            window.location="/bookings"
-          })
-          .catch(err => console.error(err))
-        },
-        {
-          label: 'No',
-          onClick: () => window.location="/bookings"
-        }
-      ]
+      customUI: ({ onClose }) => {
+        return (
+          <div className='custom-ui'>
+            <p>Are you sure you want to delete this booking?</p>
+            <button onClick={onClose}>No</button>
+            <button onClick={() => {
+                handleClickDelete()
+                onClose()
+            }}>Yes, Delete it!</button>
+          </div>
+        )
+      }
     })
-
   }
 
   return (

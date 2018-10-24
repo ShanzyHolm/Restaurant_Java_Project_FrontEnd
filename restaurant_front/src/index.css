@@ -303,8 +303,5 @@ button.submit:hover {
 }
 
 select.bookingFormSelect {
-  /* display: inline-block;
-  align-items: center; */
-  /* align-self: center; */
-  align-content: center;
+
 }

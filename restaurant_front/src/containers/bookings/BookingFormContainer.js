@@ -59,14 +59,15 @@ class BookingFormContainer extends Component{
             <input id="date" type="datetime-local" name="time_stamp"  required/>
             </div>
 
+<br/>
             <div>
-            <label className="bookingForm"><strong className="font">Select Customer:   </strong>   </label>
+            <label className="bookingForm"><strong className="font">Select Customer:   </strong></label>
             <select className="bookingFormSelect" default="Select Customer  " name="customer" id="customer">
               <option value="" disabled selected required>Select Customer  </option>
               {customerOptions}
             </select>
             </div>
-
+<br/>
             <div>
             <label className="bookingForm"><strong className="font">Select Table:   </strong>   </label>
             <select className="bookingFormSelect" name="table" id="table">
@@ -74,7 +75,7 @@ class BookingFormContainer extends Component{
               {tableOptions}
             </select>
             </div>
-
+<br/>
             <button className="submit" type="submit">Save</button>
             </grid>
           </form>

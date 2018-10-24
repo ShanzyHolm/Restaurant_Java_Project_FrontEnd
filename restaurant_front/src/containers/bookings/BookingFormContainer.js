@@ -53,19 +53,30 @@ class BookingFormContainer extends Component{
       <div className="bookingFormContainer">
         <div className="bookingForm">
           <form className="bookingForm" onSubmit={this.handleSubmit}>
-            <label for="date">Select Date & Time:</label>
+          <grid>
+          <div>
+            <label className="bookingForm" for="date"><strong className="font">Select Date & Time:  </strong>   </label>
             <input id="date" type="datetime-local" name="time_stamp"  required/>
+            </div>
 
-            <select default="Select Customer" name="customer" id="customer">
-              <option value="" disabled selected required>Select Customer</option>
+            <div>
+            <label className="bookingForm"><strong className="font">Select Customer:   </strong>   </label>
+            <select className="bookingFormSelect" default="Select Customer  " name="customer" id="customer">
+              <option value="" disabled selected required>Select Customer  </option>
               {customerOptions}
             </select>
-            <select name="table" id="table">
+            </div>
+
+            <div>
+            <label className="bookingForm"><strong className="font">Select Table:   </strong>   </label>
+            <select className="bookingFormSelect" name="table" id="table">
               <option value="" disabled selected required>Select Table</option>
               {tableOptions}
             </select>
+            </div>
 
             <button className="submit" type="submit">Save</button>
+            </grid>
           </form>
         </div>
           <img className="cutlery" src="/images/cutlery.jpg" alt=""/>

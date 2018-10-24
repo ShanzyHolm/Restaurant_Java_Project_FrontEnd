@@ -272,6 +272,7 @@ div.booking-component {
 
 div.bookingFormContainer {
   position: relative;
+  justify-content: center;
   left: 50pt;
   top: 150pt;
   right: 100pt;
@@ -299,4 +300,11 @@ button.submit:hover {
   background-color: slateblue;
   border: 1px solid darkslateblue;
   color: white;
+}
+
+select.bookingFormSelect {
+  /* display: inline-block;
+  align-items: center; */
+  /* align-self: center; */
+  align-content: center;
 }

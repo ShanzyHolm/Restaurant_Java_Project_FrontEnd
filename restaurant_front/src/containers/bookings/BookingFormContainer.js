@@ -50,7 +50,7 @@ class BookingFormContainer extends Component{
     })
 
     return(
-      <div>
+      <div className="bookingFormContainer">
         <form onSubmit={this.handleSubmit}>
           <label for="date">Select Date & Time:</label>
           <input id="date" type="datetime-local" name="time_stamp"  required/>
@@ -66,7 +66,9 @@ class BookingFormContainer extends Component{
 
           <button type="submit">Save</button>
         </form>
+        <img className="cutlery" src="/images/cutlery.jpg" alt=""/>
       </div>
+
     )
   }
 

@@ -5,8 +5,7 @@ const NavBar = () => {
   return (
 
       <header className="navBar">
-
-        Grid
+        
         <div>
           <Image src="/images/Cafe503Logo.jpg" alt="CafeLogo" className="logo" rounded />
         </div>

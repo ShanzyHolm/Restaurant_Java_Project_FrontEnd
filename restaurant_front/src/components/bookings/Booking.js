@@ -39,12 +39,14 @@ const Booking = (props) => {
 
   return (
     <div className="booking-component">
-      {/* <a href={url}> */}
-      <h4><strong>Booking Reference Number:</strong> {props.booking.id}</h4>
+      <a href={editUrl}>
+        <h4><strong>Booking Reference Number:</strong> {props.booking.id}</h4>
+      </a>
       <h5><strong>Date:</strong> {formattedDate}</h5>
       <h5><strong>Customer Name:</strong> {props.booking.customer.name}</h5>
       <h5><strong>Table Booked:</strong> {props.booking.table.name}</h5>
-      <a href={editUrl}>Edit Booking</a>
+      {/* <a href={editUrl}>Edit Booking</a> */}
+
 
       <button className="delete-button" onClick={deleteBooking}>Delete</button>
 

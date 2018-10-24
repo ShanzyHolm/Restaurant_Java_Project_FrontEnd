@@ -23,7 +23,7 @@ const selectedBooking = allBookings.filter((booking) => {
 if(props.searchDate === null){
   return (
 <div>
-    <h2> All bookings: </h2>
+  <h2 className="booking-message"> All bookings: </h2>
     <ul className="booking-component-list">
       {allBookings}
     </ul>
@@ -34,7 +34,7 @@ if(props.searchDate === null){
 else{
   return (
     <div>
-        <h2> All bookings for {filteredFormattedDate}: </h2>
+      <h2 className="booking-message"> All bookings for {filteredFormattedDate}: </h2>
 
 
     <ul className="booking-component-list">

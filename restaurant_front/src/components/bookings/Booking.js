@@ -9,7 +9,7 @@ const Booking = (props) => {
   const url = "/bookings/" + props.booking.id
 
   let date = new Date(props.booking.date);
-  let formattedDate = moment(date).format("DD/MM/YY HH:mm");
+  let formattedDate = moment.utc(date).format("DD/MM/YY HH:mm");
 
   const deleteBooking = function(event) {
     confirmAlert({
@@ -30,7 +30,7 @@ const Booking = (props) => {
         },
         {
           label: 'No',
-          onClick: () => alert('Booking not deleted')
+          onClick: () => window.location="/bookings"
         }
       ]
     })

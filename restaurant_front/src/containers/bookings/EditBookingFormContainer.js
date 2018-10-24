@@ -73,7 +73,7 @@ class EditBookingFormContainer extends Component {
                 <Button className="submit" type="submit">Update Details</Button>
               </Col>
             </FormGroup>
-            
+
           </Form>
         </div>
         <img className="cutlery" src="/images/cutlery.jpg" alt=""/>

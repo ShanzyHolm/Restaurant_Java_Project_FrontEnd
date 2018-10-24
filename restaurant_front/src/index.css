@@ -114,8 +114,8 @@ h5.message {
 /* CUSTOMER CSS */
 
 div.customer-sort {
-  position: relative;
-  left: 20pt;
+  position: fixed;
+  left: 10pt;
   top: 150pt;
 }
 
@@ -134,6 +134,7 @@ ul.customer-component-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-inline-start: 0;
 }
 
 /* CUSTOMER FORM */
@@ -171,8 +172,6 @@ button.submit:hover {
   color: white;
 }
 
-/* BOOKINGS CSS */
-
 li.customer-component-item {
   display: inline;
 }
@@ -186,12 +185,6 @@ div.customer-component {
   border-style: outset;
 }
 
-
-
-
-
-
-
 .font {
   colour: darkslateblue;
 }
@@ -204,4 +197,84 @@ strong.font {
 
 .sort-buttons {
   padding: 15px;
+}
+
+/* BOOKINGS CSS */
+
+div.booking-sort {
+  /* position: fixed; */
+  left: 10pt;
+  top: 150pt;
+}
+
+button.booking-button {
+  position: fixed;
+  top: 150pt;
+  right: 40pt;
+  background-color: darkslateblue;
+  color: white;
+
+
+}
+
+button.delete-button {
+  background-color: darkslateblue;
+  color: white;
+}
+
+.date-picker {
+  background-color: aliceblue;
+  position: fixed;
+  left: 40pt;
+  top: 160pt;
+}
+
+h2.booking-message {
+  position: relative;
+  left: 10pt;
+  top: 150pt;
+  justify-content: center;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: darkslateblue;
+}
+
+li.booking-component-item {
+  display: inline;
+}
+
+ul.booking-component-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.booking-component {
+  position: relative;
+  left: 10pt;
+  top: 150pt;
+  margin: 20px;
+  padding: 10px;
+  width: 350px;
+  border: 4px darkslateblue;
+  border-style: dashed;
+}
+
+/* BOOKING FORM */
+
+div.bookingFormContainer {
+  position: relative;
+  left: 50pt;
+  top: 150pt;
+  right: 100pt;
+  width: 80%;
+  margin: 50px;
+  padding: 25px;
+  border: 10px darkslateblue;
+  border-style: double;
+  border-radius: 25px ;
 }

@@ -32,13 +32,13 @@ class BookingContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="booking-sort">
         <div>
-          <DatePicker className="date-picker" selected={this.state.date} onChange={this.handleChange} placeholderText="View Bookings by date:"/>
-        </div>
-        <br/>
-        <div>
-          <button onClick={this.handleClick}> Show all bookings</button>
+          <DatePicker className="date-picker" selected={this.state.date} onChange={this.handleChange} placeholderText="View bookings by date:"/>
+          {/* </div>
+            <br/>
+          <div> */}
+          <button className="booking-button" onClick={this.handleClick}>Show all bookings</button>
         </div>
 
         <BookingList bookings={this.state.bookings} searchDate={this.state.searchDate}/>

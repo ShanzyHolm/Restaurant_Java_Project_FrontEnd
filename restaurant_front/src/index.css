@@ -283,8 +283,11 @@ div.bookingFormContainer {
   border-radius: 25px ;
 }
 
-div.bookingFormContainer {
-
+form.bookingForm {
+    display: flex;
+    justify-content: center;
+    left: 10pt;
+    top: 150pt;
 }
 
 button.submit {

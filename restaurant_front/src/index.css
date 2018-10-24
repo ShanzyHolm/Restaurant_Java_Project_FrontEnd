@@ -119,6 +119,10 @@ div.customer-sort {
   top: 150pt;
 }
 
+div.customer-display {
+
+}
+
 button.customer-button {
   background-color: darkslateblue;
   color: white;
@@ -277,4 +281,19 @@ div.bookingFormContainer {
   border: 10px darkslateblue;
   border-style: double;
   border-radius: 25px ;
+}
+
+div.bookingFormContainer {
+
+}
+
+button.submit {
+  background-color: darkslateblue;
+  color: white;
+}
+
+button.submit:hover {
+  background-color: slateblue;
+  border: 1px solid darkslateblue;
+  color: white;
 }

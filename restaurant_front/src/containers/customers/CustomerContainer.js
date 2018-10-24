@@ -45,9 +45,11 @@ class CustomerContainer extends Component {
 
     return (
       <div className="customer-sort">
-        <button  className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>
-      <button className="customer-button" onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</button>
-      <CustomerList customers={this.state.customers}/>
+        <div className="customer-display">
+          <button  className="customer-button" onClick={this.sortCustomersByBookingCountDesc}>Sort By No. of Bookings (desc)</button>
+          <button className="customer-button" onClick={this.sortCustomersByBookingCountAsc}>Sort By No. of Bookings (asc)</button>
+          <CustomerList customers={this.state.customers}/>
+        </div>
     </div>
     )
   }

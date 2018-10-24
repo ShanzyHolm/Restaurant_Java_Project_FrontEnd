@@ -119,6 +119,19 @@ div.customer-sort {
   top: 150pt;
 }
 
+h2.customer-message {
+  position: relative;
+  left: 10pt;
+  justify-content: center;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  color: darkslateblue;
+}
+
 div.customer-display {
 
 }

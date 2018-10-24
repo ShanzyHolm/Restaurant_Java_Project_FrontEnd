@@ -208,12 +208,13 @@ div.booking-sort {
 }
 
 button.booking-button {
-  position: relative;
+  position: fixed;
   top: 150pt;
+  right: 40pt;
   background-color: darkslateblue;
   color: white;
-  position: fixed;
-  right: 40pt;
+
+
 }
 
 button.delete-button {
